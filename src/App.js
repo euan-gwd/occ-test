@@ -5,10 +5,13 @@ import Keypad from './components/Keypad'
 import './app-styles.scss'
 
 function App() {
-  const [result, setResult] = useState({ total: null, next: null, operation: null })
+  const [result, setResult] = useState({ total: 0, next: 0, operation: 0 })
 
-  const handleClick = (buttonName) => {
-    console.log(buttonName)
+  const handleClick = (value) => {
+    const checkNumberRegex = /\d{1}/
+    if (checkNumberRegex.test(value)) {
+      setResult({ ...result, next: Number(value) })
+    }
   }
 
   return (
