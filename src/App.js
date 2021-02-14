@@ -7,7 +7,9 @@ import './app-styles.scss'
 function App() {
   const [result, setResult] = useState({ total: null, next: null, operation: null })
 
-  const handleClick = (buttonName) => {}
+  const handleClick = (buttonName) => {
+    console.log(buttonName)
+  }
 
   return (
     <div className="app">

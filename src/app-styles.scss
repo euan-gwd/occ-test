@@ -1,5 +1,4 @@
 $result-color: #0d0d0d;
-$funckeys-color: #8e8e8e;
 $border-color: #e7e7e7;
 $app-background-color: #f2f2f2;
 $app-frame-color: #ffffff;
@@ -15,11 +14,15 @@ $app-frame-color: #ffffff;
 .app-main {
   background: $app-frame-color;
   border: 1px solid $border-color;
+  border-radius: 0.25rem;
 }
 
 .result-display {
-  height: 3rem;
-  padding: 0.5rem 0;
-  text-align: right;
+  height: 6rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
   border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2.5rem;
 }

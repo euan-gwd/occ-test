@@ -2,7 +2,7 @@ import React from 'react'
 
 import './keypad-styles.scss'
 
-const Keypad = () => {
+const Keypad = ({ handleOnClick }) => {
   const keypadLayout = [
     'AC',
     `CE`,
@@ -28,7 +28,7 @@ const Keypad = () => {
   return (
     <div className="keypad">
       {keypadLayout.map((item, idx) => (
-        <button className="keypad-key" key={`${item}-${idx}`}>
+        <button className="keypad-key" key={idx} onClick={() => handleOnClick(item)}>
           {item}
         </button>
       ))}
