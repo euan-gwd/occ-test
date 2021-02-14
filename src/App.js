@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+
+import Keypad from './components/Keypad'
+
+import './app-styles.scss'
 
 function App() {
+  const [result, setResult] = useState({ total: null, next: null, operation: null })
+
+  const handleClick = (buttonName) => {}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app-main">
+        <div className="result-display">{result.next || result.total || `0`}</div>
+        <Keypad handleOnClick={handleClick} />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,16 @@
+$operators-color: #008bce;
+$calculate-color: #ce518a;
+$numkeys-color: #2b2b2b;
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 3rem);
+  grid-template-rows: repeat(5, 3rem);
+}
+
+.keypad-key {
+  color: $numkeys-color;
+  border: none;
+  background: white;
+  outline: none;
+}
